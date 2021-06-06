@@ -1,2 +1,2 @@
 # TripletAttention
-The official implementation of Triplet Attention.
+We will release the code soon.
