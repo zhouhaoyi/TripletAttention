@@ -21,9 +21,9 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-We implement BERT-$A^3$ and DistilBERT-$A^3$ in `huggingface transformers`, you can use BERT-$A^3$ or DistilBERT-$A^3$ model like BERT or DistilBERT model in `huggingface transformers`.
+We implement BERT-A<sup>3</sup> and DistilBERT-A<sup>3</sup> in `huggingface transformers`, you can use BERT-A<sup>3</sup> or DistilBERT-A<sup>3</sup> model like BERT or DistilBERT model in `huggingface transformers`.
 
-build BERT-$A^3$
+build BERT-A<sup>3</sup>
 
 ```
 from transformers import BertTokenizer, BertModel, BertConfig
@@ -44,7 +44,7 @@ config.head_choice = 12 # whether to choose triplet attention heads randomly (0:
 bert_A3 = BertModel.from_pretrained('bert-base-uncased', config=config)
 ```
 
-use BERT-$A^3$
+use BERT-A<sup>3</sup>
 
 ```
 from transformers import BertTokenizer, BertModel, BertConfig
@@ -62,7 +62,7 @@ You can refer to `/transformers/models/bert/modeling_bert.py` to get more detail
 
 
 ## Train Commands
-Commands for training and testing the model BERT-$A^3 on GLUE task (rte):
+Commands for training and testing the model BERT-A<sup>3</sup> on GLUE task (rte):
 
 ```
 python run_glue.py --model_name_or_path bert-base-uncased --task_name rte --do_train --do_eval --do_predict --max_seq_length 128 --per_device_train_batch_size 16 --per_device_eval_batch_size 16 --cross_type 0 --agg_type 0 --tlayers '0,1,2,3' --learning_rate 3e-5 --num_train_epochs 6 --key2_flag 0 --random_flag 0 --absolute_flag 0 --permute_back 0 --permute_type '0,1,3,5,6' --head_choice 0 --group_size 1 --overwrite_output_dir --output_dir ./run/
