@@ -1,6 +1,6 @@
 # Triplet Attention: Rethinking the similarity in Transformers
 
-This is the pytorch implementation of Triplet Attention in the following paper: [Triplet Attention: Rethinking the similarity in Transformers]().
+This is the pytorch implementation of Triplet Attention in the KDD'21 paper: [Triplet Attention: Rethinking the similarity in Transformers]().
 
 
 ## Requirements
