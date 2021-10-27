@@ -1,6 +1,6 @@
 # Triplet Attention: Rethinking the similarity in Transformers
 
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fzhouhaoyi%2FTripletAttention&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com) This is the pytorch implementation of Triplet Attention in the KDD'21 paper: [Triplet Attention: Rethinking the similarity in Transformers](https://dl.acm.org/doi/abs/10.1145/3447548.3467241).
+This is the pytorch implementation of Triplet Attention in the KDD'21 paper: [Triplet Attention: Rethinking the similarity in Transformers](https://dl.acm.org/doi/abs/10.1145/3447548.3467241).
 
 
 ## Requirements
@@ -66,4 +66,25 @@ Commands for training and testing the model BERT-A<sup>3</sup> on GLUE task (rte
 
 ```
 python run_glue.py --model_name_or_path bert-base-uncased --task_name rte --do_train --do_eval --do_predict --max_seq_length 128 --per_device_train_batch_size 16 --per_device_eval_batch_size 16 --cross_type 0 --agg_type 0 --tlayers '0,1,2,3' --learning_rate 3e-5 --num_train_epochs 6 --key2_flag 0 --random_flag 0 --absolute_flag 0 --permute_back 0 --permute_type '0,1,3,5,6' --head_choice 0 --group_size 1 --overwrite_output_dir --output_dir ./run/
+```
+
+## <span id="citelink">Citation</span>
+If you find this repository useful in your research, please consider citing the following paper: [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fzhouhaoyi%2FTripletAttention&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+
+```
+@inproceedings{haoyietal-tripletAttention-2021,
+  author    = {Haoyi Zhou and
+               Jianxin Li and
+               Jieqi Peng and
+               Shuai Zhang and
+               Shanghang Zhang},
+  editor    = {Feida Zhu and
+               Beng Chin Ooi and
+               Chunyan Miao},
+  title     = {Triplet Attention: Rethinking the Similarity in Transformers},
+  booktitle = {The 27th {ACM} {SIGKDD} Conference on Knowledge Discovery and Data Mining, {KDD} 2021, Virtual Event},
+  pages     = {2378--2388},
+  publisher = {{ACM}},
+  year      = {2021},
+}
 ```
